@@ -127,7 +127,7 @@
       "projectType": "library",
       "root": "projects/static-typescript-translate",
       "sourceRoot": "projects/static-typescript-translate/src",
-      "prefix": "lib",
+      "prefix": "static-translate",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -155,6 +155,46 @@
             "tsConfig": [
               "projects/static-typescript-translate/tsconfig.lib.json",
               "projects/static-typescript-translate/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "translate-example": {
+      "projectType": "library",
+      "root": "projects/translate-example",
+      "sourceRoot": "projects/translate-example/src",
+      "prefix": "translate-example",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/translate-example/tsconfig.lib.json",
+            "project": "projects/translate-example/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/translate-example/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/translate-example/src/test.ts",
+            "tsConfig": "projects/translate-example/tsconfig.spec.json",
+            "karmaConfig": "projects/translate-example/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/translate-example/tsconfig.lib.json",
+              "projects/translate-example/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

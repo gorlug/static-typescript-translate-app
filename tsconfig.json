@@ -19,6 +19,10 @@
       "static-typescript-translate": [
         "dist/static-typescript-translate/static-typescript-translate",
         "dist/static-typescript-translate"
+      ],
+      "translate-example": [
+        "dist/translate-example/translate-example",
+        "dist/translate-example"
       ]
     }
   }

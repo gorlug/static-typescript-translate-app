@@ -1,3 +1,4 @@
 export const en = {
-  hello: 'hello world'
+  hello: 'hello world',
+  ['ROUTES.hello']: 'hello'
 }
