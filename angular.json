@@ -122,6 +122,46 @@
           }
         }
       }
+    },
+    "static-typescript-translate": {
+      "projectType": "library",
+      "root": "projects/static-typescript-translate",
+      "sourceRoot": "projects/static-typescript-translate/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/static-typescript-translate/tsconfig.lib.json",
+            "project": "projects/static-typescript-translate/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/static-typescript-translate/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/static-typescript-translate/src/test.ts",
+            "tsConfig": "projects/static-typescript-translate/tsconfig.spec.json",
+            "karmaConfig": "projects/static-typescript-translate/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/static-typescript-translate/tsconfig.lib.json",
+              "projects/static-typescript-translate/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "static-typescript-translate-app"
