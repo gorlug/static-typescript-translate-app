@@ -1,3 +1,5 @@
-export const de = {
-  libText: 'irgend ein Bücherei Text'
+export class DEClass {
+  translateExample = {
+    libText: 'irgend ein Bücherei Text'
+  }
 }

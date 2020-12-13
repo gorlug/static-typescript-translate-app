@@ -1,3 +1,5 @@
-export const en = {
-  libText: 'some lib text'
+export class ENClass {
+  translateExample = {
+    libText: 'some lib text'
+  }
 }

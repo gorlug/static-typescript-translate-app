@@ -6,11 +6,15 @@ import {AppComponent} from './app.component'
 import {HelloComponent} from './hello/hello.component'
 import {TranslateDefaultParser, TranslateLoader, TranslateModule, TranslateParser} from '@ngx-translate/core'
 import {StaticTypescriptTranslateModule} from '../../projects/static-typescript-translate/src/lib/static-typescript-translate.module'
-import {en} from './i18n/en'
-import {StaticTypescriptTranslateService} from '../../projects/static-typescript-translate/src/lib/static-typescript-translate.service'
+import {ENClass} from './i18n/ENClass'
+import {
+  generatePathMap,
+  StaticTypescriptTranslateService
+} from '../../projects/static-typescript-translate/src/lib/static-typescript-translate.service'
 import {HttpClientModule} from '@angular/common/http'
-import {de} from './i18n/de'
+import {DEClass} from './i18n/DEClass'
 import {TranslateExampleModule} from '../../projects/translate-example/src/lib/translate-example.module'
+import {TRANSLATE_KEYS} from './TranslateKeys'
 
 export function createLoader(translateService: StaticTypescriptTranslateService) {
   return translateService
@@ -31,7 +35,7 @@ export function createTranslateParser() {
     AppRoutingModule,
     HttpClientModule,
     StaticTypescriptTranslateModule.forRoot({
-      en, de
+      en: new ENClass(), de: new DEClass()
     }),
     TranslateModule.forRoot({
       loader: {
@@ -44,7 +48,12 @@ export function createTranslateParser() {
     }),
     TranslateExampleModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: TRANSLATE_KEYS,
+      useValue: generatePathMap(new ENClass())
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
