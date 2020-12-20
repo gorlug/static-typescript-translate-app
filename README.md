@@ -4,6 +4,8 @@ This lib is a TranslateLoader for the [@ngx-translate/core](https://github.com/n
 translations from a class inside a TypeScript file. This will allow you to have code completion of the translate
 keys inside your keys if set up like this:
 
+A full working example is provided here with this repo.
+
 ## Setup
 
 Create a ts file for each language like this, e.g. in `src/app/i18n/ENClass.ts`:
