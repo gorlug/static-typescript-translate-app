@@ -8,6 +8,14 @@ A full working example is provided here with this repo.
 
 ## Setup
 
+Install via
+
+`npm i @gorlug/static-typescript-translate`
+
+or
+
+`yarn add @gorlug/static-typescript-translate`
+
 Create a ts file for each language like this, e.g. in `src/app/i18n/ENClass.ts`:
 
 ```typescript

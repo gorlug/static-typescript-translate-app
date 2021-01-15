@@ -8,5 +8,6 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "repository": "https://github.com/gorlug/static-typescript-translate-app"
 }
