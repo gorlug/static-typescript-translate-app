@@ -1,8 +1,10 @@
 # StaticTypescriptTranslate
 
-This lib is a TranslateLoader for the [@ngx-translate/core](https://github.com/ngx-translate/core) lib. It loads the 
-translations from a class inside a TypeScript file. This will allow you to have code completion of the translate 
+This lib is a TranslateLoader for the [@ngx-translate/core](https://github.com/ngx-translate/core) lib. It loads the
+translations from a class inside a TypeScript file. This will allow you to have code completion of the translate
 keys inside your keys if set up like this:
+
+A full working example is provided here with this repo.
 
 ## Setup
 
@@ -20,7 +22,7 @@ export class ENClass {
 }
 ```
 
-In `app.module.ts` load the lib with a JSON object where the key is the name of the language and the value points to 
+In `app.module.ts` load the lib with a JSON object where the key is the name of the language and the value points to
 an instance of the class with the translate keys:
 
 ```typescript
@@ -91,28 +93,3 @@ StaticTypescriptTranslateModule.forChild({
   }
 })
 ```
-
-# Default readme
-
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
-
-## Code scaffolding
-
-Run `ng generate component component-name --project static-typescript-translate` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project static-typescript-translate`.
-> Note: Don't forget to add `--project static-typescript-translate` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build static-typescript-translate` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build static-typescript-translate`, go to the dist folder `cd dist/static-typescript-translate` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test static-typescript-translate` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
