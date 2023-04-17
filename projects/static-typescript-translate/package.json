@@ -2,12 +2,12 @@
   "name": "@gorlug/static-typescript-translate",
   "version": "1.0.4",
   "peerDependencies": {
-    "@angular/common": "^13.4.0",
-    "@angular/core": "^13.4.0",
-    "@ngx-translate/core": "^13.0.0"
+    "@angular/common": "^15.2.7",
+    "@angular/core": "^15.2.7",
+    "@ngx-translate/core": "^14.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.5.0"
   },
   "repository": "https://github.com/gorlug/static-typescript-translate-app",
   "license": "ISC"

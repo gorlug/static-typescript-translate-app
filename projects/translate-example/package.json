@@ -2,10 +2,10 @@
   "name": "translate-example",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^11.0.4",
-    "@angular/core": "^11.0.4"
+    "@angular/common": "^15.2.7",
+    "@angular/core": "^15.2.7"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.5.0"
   }
 }
