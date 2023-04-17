@@ -1,6 +1,6 @@
 {
   "name": "@gorlug/static-typescript-translate",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "peerDependencies": {
     "@angular/common": "^15.2.7",
     "@angular/core": "^15.2.7",
